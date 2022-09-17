@@ -1,15 +1,15 @@
 <?php
 
-namespace Tests\Support\Database\Migrations;
+namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class ExampleMigration extends Migration
+class User extends Migration
 {
-    protected $DBGroup = 'tests';
-
     public function up()
     {
+        //
+
         $this->forge->addField('id');
         $this->forge->addField([
             'name'       => ['type' => 'varchar', 'constraint' => 31],
@@ -32,6 +32,7 @@ class ExampleMigration extends Migration
 
     public function down()
     {
-        $this->forge->dropTable('users');
+        //
+                $this->forge->dropTable('users');
     }
 }

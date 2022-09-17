@@ -37,6 +37,14 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->resource('users');
+
+$routes->get('hello',function(){
+
+    echo "Jai Shree Ram";
+});
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
