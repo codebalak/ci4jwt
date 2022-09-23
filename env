@@ -14,7 +14,7 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = production
+ CI_ENVIRONMENT = development
 
 #--------------------------------------------------------------------
 # APP
@@ -39,13 +39,13 @@
 # DATABASE
 #--------------------------------------------------------------------
 
-# database.default.hostname = localhost
-# database.default.database = ci4
-# database.default.username = root
-# database.default.password = root
-# database.default.DBDriver = MySQLi
-# database.default.DBPrefix =
-# database.default.port = 3306
+ database.default.hostname = localhost
+ database.default.database = ci4
+ database.default.username = root
+ database.default.password = 
+ database.default.DBDriver = MySQLi
+ database.default.DBPrefix =
+ database.default.port = 3306
 
 # database.tests.hostname = localhost
 # database.tests.database = ci4_test
@@ -138,3 +138,8 @@
 #--------------------------------------------------------------------
 
 # curlrequest.shareOptions = true
+
+#JWT_SECRET_KEY key is the secret key used by the application to sign JWTS. Pick a stronger one for production.
+JWT_SECRET_KEY=kzUf4sxss4AeG5uHkNZAqT1Nyi1zVfpz 
+#JWT_TIME_TO_LIVE indicates the validity period of a signed JWT (in milliseconds)
+JWT_TIME_TO_LIVE=3600
